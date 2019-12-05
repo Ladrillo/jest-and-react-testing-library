@@ -11,4 +11,5 @@ afterEach(rtl.cleanup)
 it('renders without crashing', () => {
   // step 3 - mount the component we want to test
   const wrapper = rtl.render(<App />)
+  wrapper.debug()
 });
