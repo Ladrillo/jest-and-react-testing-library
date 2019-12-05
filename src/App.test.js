@@ -10,8 +10,7 @@ afterEach(rtl.cleanup)
 
 it('renders without crashing', () => {
   // step 3 - mount the component we want to test
-  const wrapper = rtl.render(<App />)
-  // wrapper.debug()
+  const wrapper = rtl.render(<App insult='silly' />)
   // step 4 - capture the element of interest BY "READABLE" PROPERTY
   // we normally care about the readable text
   // or the aria attributes (screen readers)
@@ -22,7 +21,14 @@ it('renders without crashing', () => {
 
 it('insults the user correctly', () => {
   const wrapper = rtl.render(<App insult='moron' />)
+  wrapper.debug()
   const insult = wrapper.queryByText(/moron/i)
   expect(insult).toBeInTheDocument()
   expect(insult).toBeVisible()
+})
+
+it("has alt text of logo", () => {
+  const wrapper = rtl.render(<App insult='moron' />)
+  const altTextLogo = wrapper.queryByAltText(/logo/i)
+  expect(altTextLogo).toBeInTheDocument()
 })
