@@ -65,6 +65,7 @@ describe('helpers', () => { // describe block
       expect(() => operations(2, '3')).toThrow()
       expect(() => operations('2', 3)).toThrow()
       expect(() => operations()).toThrow()
+      expect(() => operations(1, NaN)).toThrow()
     })
   })
 })
