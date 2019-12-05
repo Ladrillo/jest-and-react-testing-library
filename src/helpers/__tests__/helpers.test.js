@@ -53,7 +53,12 @@ describe('helpers', () => { // describe block
     })
 
     it('returns an object of the right shape', () => {
-      expect(operations(2, 3)).toEqual()
+      expect(operations(2, 3)).toEqual({
+        sum: 5,
+        product: 6,
+        max: 3,
+        numbers: [2, 3]
+      })
     })
   })
 })
