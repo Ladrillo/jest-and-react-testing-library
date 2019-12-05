@@ -9,6 +9,13 @@ describe('helpers', () => { // describe block
     expect(5).toBeLessThanOrEqual(5)
     expect(5).not.toBeNaN()
     expect('5').toMatch(/5/)
+    expect(5).toBe(5)
     expect(() => { throw new Error('That sounds like trolling') }).toThrow()
+  })
+
+  describe('operations function', () => {
+    it('returns something that is defined', () => {
+      expect(operations(2, 3)).toBeDefined()
+    })
   })
 })
