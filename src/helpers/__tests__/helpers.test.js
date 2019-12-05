@@ -26,5 +26,17 @@ describe('helpers', () => { // describe block
     it('returns an object with a "sum" key', () => {
       expect(operations(2, 3)).toHaveProperty('sum')
     })
+
+    it('returns an object with a "product" key', () => {
+      expect(operations(2, 3)).toHaveProperty('product')
+    })
+
+    it('returns an object with a "max" key', () => {
+      expect(operations(2, 3)).toHaveProperty('max')
+    })
+
+    it('returns an object with a "numbers" key', () => {
+      expect(operations(2, 3)).toHaveProperty('numbers')
+    })
   })
 })
