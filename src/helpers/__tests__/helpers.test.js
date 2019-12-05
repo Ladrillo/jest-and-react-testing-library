@@ -1,6 +1,8 @@
-describe('helpers', () => {
-  it('jest is working', () => {
-    expect(5).toBeDefined()
+import { operations } from '../helpers'
+
+describe('helpers', () => { // describe block
+  it('seems to work', () => { // test
+    expect(5).toBeDefined() // assertions
     expect(5).toBeTruthy()
     expect(5).toBeGreaterThan(4)
     expect(5).not.toBeFalsy()
