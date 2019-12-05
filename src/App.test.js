@@ -19,3 +19,10 @@ it('renders without crashing', () => {
   // step 5 - assert that the element is there
   expect(learnReactElement).toBeInTheDocument()
 });
+
+it('insults the user correctly', () => {
+  const wrapper = rtl.render(<App insult='moron' />)
+  const insult = wrapper.queryByText(/moron/i)
+  expect(insult).toBeInTheDocument()
+  expect(insult).toBeVisible()
+})
