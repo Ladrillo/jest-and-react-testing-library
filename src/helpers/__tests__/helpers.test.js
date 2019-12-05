@@ -14,8 +14,17 @@ describe('helpers', () => { // describe block
   })
 
   describe('operations function', () => {
-    it('returns something that is defined', () => {
-      expect(operations(2, 3)).toBeDefined()
+    it('returns something truthy', () => { // test
+      expect(operations(2, 3)).toBeDefined() // assertion
+      expect(operations(2, 3)).toBeTruthy() // assertion
+    })
+
+    it('returns an object', () => {
+      expect(operations(2, 3)).toBeInstanceOf(Object)
+    })
+
+    it('returns an object with a "sum" key', () => {
+      expect(operations(2, 3)).toHaveProperty('sum')
     })
   })
 })
