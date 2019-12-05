@@ -51,5 +51,9 @@ describe('helpers', () => { // describe block
     it('calculates the right numbers', () => {
       expect(operations(2, 3).numbers).toEqual([2, 3])
     })
+
+    it('returns an object of the right shape', () => {
+      expect(operations(2, 3)).toEqual()
+    })
   })
 })
