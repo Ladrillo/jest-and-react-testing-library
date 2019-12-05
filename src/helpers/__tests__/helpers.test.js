@@ -60,5 +60,11 @@ describe('helpers', () => { // describe block
         numbers: [2, 3]
       })
     })
+
+    it('throws an error if passed not numbers', () => {
+      expect(() => operations(2, '3')).toThrow()
+      expect(() => operations('2', 3)).toThrow()
+      expect(() => operations()).toThrow()
+    })
   })
 })
