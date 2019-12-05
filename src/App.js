@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App({ insult }) {
   return (
     <div className="App lady gaga">
       <header className="App-header">
@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React, you {insult}
         </a>
       </header>
     </div>
