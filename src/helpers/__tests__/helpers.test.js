@@ -38,5 +38,18 @@ describe('helpers', () => { // describe block
     it('returns an object with a "numbers" key', () => {
       expect(operations(2, 3)).toHaveProperty('numbers')
     })
+
+    it('calculates the right sum', () => {
+
+    })
+    it('calculates the right product', () => {
+      
+    })
+    it('calculates the right max', () => {
+      
+    })
+    it('calculates the right numbers', () => {
+      
+    })
   })
 })
